@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>logged in</title>
+<style>
+
+</style>
+</head>
+<body text-align:center>
+{% if user.is_authenticated%}
+<form action="" method="post">
+    {% csrf_token %}
+    {%if msg%}
+        {{msg}}
+    {%endif%}
+    <label for="priorityA">Choose a subject:</label>
+
+<select name="priorityA" id="A">
+  <option value="web">web technology</option>
+  <option value="food">foodandnutrition</option>
+  <option value="ism">informationsecurity</option>
+</select>
+<label for="priorityB">Choose a subject:</label>
+
+<select name="priorityB" id="B">
+  <option value="web">web technology</option>
+  <option value="food">foodandnutrition</option>
+  <option value="ism">informationsecurity</option>
+</select>
+<label for="priorityC">Choose a subject:</label>
+
+<select name="priorityC" id="C">
+  <option value="web">web technology</option>
+  <option value="food">foodandnutrition</option>
+  <option value="ism">informationsecurity</option>
+</select>
+<button class='button'>Send</button>
+</form>
+{%endif%}
+</body>
+</html>

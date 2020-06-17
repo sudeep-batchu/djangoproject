@@ -1,0 +1,11 @@
+<html>
+<body>
+<form action="/" method="GET">
+{% csrf_token %}
+{%if msg%}
+{{msg}}
+{%endif%}
+<button type='submit'>logoout</button>
+</form>
+</body>
+</html>

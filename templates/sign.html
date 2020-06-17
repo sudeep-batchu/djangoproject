@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>login</title>
+</head>
+<body>
+
+<form action="" method="POST">
+<div class="container">
+   {% csrf_token %}
+   {{msg}}
+   <br><br>
+    {% for fields in form%}
+      {{fields.label}}:{{fields}}
+    {%endfor%}
+    <button type="submit">login</button>
+    <a href="Register">register</a>
+  </div>
+</form>
+</body>
+</html>
